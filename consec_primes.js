@@ -19,12 +19,12 @@ let nthNonPrime = num-1; // targetLength-th number in sequence
 
 
 let primes = "";
-for (let i = nthNonPrime; i >= (nthNonPrime - targetLength);--i){ //print list of nonprimes
+for (let i = nthNonPrime; i > (nthNonPrime - targetLength);--i){ //print list of nonprimes
   primes = i.toString() + " Prime Factors: (" ;
   primelist.forEach(function(d) {
     if (i%d===0) {
       primes = primes.concat(d.toString()+ " ");
     }
   });
-  console.log(primes.concat(")\\\\"));
+  console.log(primes.concat(")"));
 }
